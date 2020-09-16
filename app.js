@@ -8,10 +8,13 @@ let sheetAsJSON = "https://spreadsheets.google.com/feeds/list/1deWdcbHJbl85QS8QR
 
 
 const render = (projectsArr) => {
-    projectsArr.forEach(elem => { //for each object in the array
+    projectsArr.forEach(elem => {
         console.log('projectsArr:', elem)
-        const $div = $(`<div class="indivProj"></div>`) //create "indivProj" div and add to end
+        const $div = $('<div class="indivProj"></div>')
+        $div.attr('href', elem.link)
         $('div.portContainer').append($div)
+
+        console.log('project link:', elem.link)
 
         const $img = $('<img class="projImg">')
         $img.attr('src', elem.image).attr('alt', 'project preview')
@@ -19,6 +22,14 @@ const render = (projectsArr) => {
 
         const $p = $(`<p class="title">${elem.title}</p>`)
         $($div).append($p)
+
+        // const $a = $('<a>')
+        // $a.attr('href', elem.link)
+        // $($div).append($a)
+
+        $div.click(function () {
+            window.location = $(this).attr('href');
+        });
     })
 }
 
@@ -29,7 +40,7 @@ $.ajax({ url: sheetAsJSON })
                 title: project.gsx$title.$t,
                 image: project.gsx$image.$t,
                 description: project.gsx$description.$t,
-                link: project.gsx$description.$t,
+                link: project.gsx$link.$t,
             }
         })
 
@@ -38,23 +49,23 @@ $.ajax({ url: sheetAsJSON })
     })
 
 //jquery to on click show menu block
-    const $menuIcon = $('.menuIcon')
-    const $a = $('a') //class for a instead?
-    let show = false;
+    // const $menuIcon = $('.menuIcon')
+    // const $a = $('a') //class for a instead?
+    // let show = false;
 
-    //handler for click event
-    const showMenu = (event) => {
-        if(show) {
-            $a.each(function(index) {
-                $(this).css('display', 'none')
-            })
-            show = false
-        } else {
-            $a.each(function(index){
-                $(this).css('display','block')
-            })
-            show = true
-        }
-    }
+//handler for click event
+    // const showMenu = (event) => {
+    //     if (show) {
+    //         $a.each(function (index) {
+    //             $(this).css('display', 'none')
+    //         })
+    //         show = false
+    //     } else {
+    //         $a.each(function (index) {
+    //             $(this).css('display', 'block')
+    //         })
+    //         show = true
+    //     }
+    // }
 
-    $menuIcon.on('click', showMenu)
+    // $menuIcon.on('click', showMenu)
