@@ -1,0 +1,140 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.navContainer {
+    display: grid;
+    /* revisit column setup */
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    background-color: #774C60;
+    padding: 10px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    color: #D8D4D8;
+    grid-column: 1/2;
+    justify-self: start;
+    align-self: center;
+}
+
+#menuItems { 
+    grid-column: 2/3;
+   
+}
+
+#menuItems a {
+    justify-self: end;
+    align-self: center;
+    /* display: none; */
+}
+
+#menuIcon {
+    grid-column: 3/4;
+    display: grid;
+}
+
+#menuIcon i {
+    justify-self: end;
+    align-self: center;
+}
+
+.homepage {
+    height: 400px;
+    background-image: url("https://images.unsplash.com/photo-1542407424724-5426773d65a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-position: center -200px;
+    background-size: 150%; */
+    
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    padding: 125px 0 0 0;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #372549;
+    padding: 20px;
+}
+
+.portContainer {
+    display: grid;
+}
+
+.indivProj {
+    border: solid;
+    height: 200px;
+    width: 300px;
+    justify-self: center;
+    margin: 0 0 20px 0;
+}
+
+.projImg {
+    max-width: 100%;
+    max-height: 85%;
+}
+
+.title {
+    background-color: #D8D4D8;
+    color: #774C60;
+    font-size: 20px;
+}
+
+.skillsIconsContain {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 30%;
+    height: 30%;
+    margin: 0 0 30px 0;
+}
+
+.iconImage {
+    width: 100%;
+}
+
+.iconLabel {
+    font-size: 12px;
+    color: #372549; 
+    text-align: center;
+}
+
+
+.contact {
+    background-color: #b75d69;
+}
+.profilePic {
+    width: 100px;
+    border-radius: 35px;
+    margin: 0 0 25px 25px;
+}
+
+.email {
+    font-size: 15px;
+    padding: 20px;
+}
+
+footer {
+    
+}
