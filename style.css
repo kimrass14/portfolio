@@ -70,6 +70,8 @@ h3 {
 
 .portContainer {
     display: grid;
+    justify-content: center;
+    padding: 40px 0px;
 }
 
 .indivProj {
@@ -99,10 +101,11 @@ h3 {
 }
 
 .skillsIconsContain {
-    padding: 25px;
+    padding: 35px 15px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .icon {
@@ -124,6 +127,7 @@ h3 {
 
 .contact {
     background-color: #b75d69;
+    padding-bottom: 30px;
 }
 
 form {
@@ -141,6 +145,7 @@ input {
     background-color: #D8D4D8;
     border: none;
     padding: 5px;
+    margin: auto;
     margin-bottom: 5px;
 }
 
@@ -151,6 +156,7 @@ textarea {
     background-color: #D8D4D8;
     border: none;
     padding: 5px;
+    margin: auto;
     margin-bottom: 5px;
 }
 
@@ -161,23 +167,25 @@ button {
     color: white;
     border: none;
     padding: 5px;
+    margin: auto;
 }
 
 .profilePic {
     width: 100px;
     border-radius: 35px;
-    margin: 25px 0 25px 25px;
+    margin: 30px auto;
+    display: block;
 }
 
 .email {
-    font-size: 15px;
-    padding: 20px;
+    font-size: 10px;
+    text-align: center;
 }
 
 footer {
     background-color: black;
     color: #D8D4D8;
-    padding: 5px;
+    padding: 10px;
 }
 
 p.footer {
@@ -187,4 +195,92 @@ p.footer {
 #reference {
     color: #D8D4D8;
     font-size: 8px;
+}
+.reference {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .menuItems {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+
+    }
+    .menuItems a.menuLink {
+        display: inline;
+        color: white;
+    }
+
+    .menuItems i {
+        display: none;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .portContainer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 20px 120px 20px;
+    }
+    .indivProj {
+        padding: auto;
+        margin: 10px;
+    }
+    .skillsIconContain {
+        padding: 35px 25px;
+    }
+    .icon {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+   
+    .menuItems {
+        width: 40%;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    h3 {
+        font-size: 40px;
+        padding: 40px;
+    }
+    .portContainer {
+        justify-content: center;
+        grid-template-columns: repeat(3, 25%);
+    }
+    .indivProj {
+        margin: 10px;
+        padding: 0px;
+    }
+    .icon {
+        width: 10%;
+        height: 10%;
+        margin: 0 25px;
+    }
+    input, textarea {
+        width: 30%;
+        padding: 10px;
+    }
+    button {
+        width: 31.5%;
+        padding: 10px;
+    }
+    .profilePic {
+        width: 200px;
+    }
+    .email {
+        font-size: 15px;
+    }
 }

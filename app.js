@@ -66,10 +66,12 @@ const showMenu = (event) => {
 $menuIcon.on('click', showMenu)
 
 //on click of menu item, menu disappears!!
-const hideMenu = (event) => {
-    $a.each(function (index) {
-        $(this).css('display', 'none')
-    })
+if ($(window).width() < 768) {
+    const hideMenu = (event) => {
+        $a.each(function (index) {
+            $(this).css('display', 'none')
+        })
 
+    }
+    $a.on('click', hideMenu)
 }
-$a.on('click', hideMenu)
