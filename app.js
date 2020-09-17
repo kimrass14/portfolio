@@ -23,8 +23,14 @@ const render = (projectsArr) => {
         const $p = $(`<p class="title">${elem.title}</p>`)
         $($div).append($p)
 
+        //add div for hover opacity
+        const $view = $('<div class="view"></div>')
+        $view.text("View Project")
+        $($div).append($view)
+
         $div.click(function () {
             window.location = $(this).attr('href');
+
         });
     })
 }
@@ -66,7 +72,7 @@ const showMenu = (event) => {
 $menuIcon.on('click', showMenu)
 
 //on click of menu item, menu disappears!!
-if ($(window).width() < 768) {
+if ($(window).width() < 769) {
     const hideMenu = (event) => {
         $a.each(function (index) {
             $(this).css('display', 'none')
