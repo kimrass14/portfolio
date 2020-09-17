@@ -23,10 +23,6 @@ const render = (projectsArr) => {
         const $p = $(`<p class="title">${elem.title}</p>`)
         $($div).append($p)
 
-        // const $a = $('<a>')
-        // $a.attr('href', elem.link)
-        // $($div).append($a)
-
         $div.click(function () {
             window.location = $(this).attr('href');
         });
@@ -61,7 +57,7 @@ const showMenu = (event) => {
         })
         show = false
     } else {
-            $a.each(function (index) {
+        $a.each(function (index) {
             $(this).css('display', 'none')
         })
         show = true
