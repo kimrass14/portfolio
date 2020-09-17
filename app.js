@@ -49,23 +49,31 @@ $.ajax({ url: sheetAsJSON })
     })
 
 //jquery to on click show menu block
-    // const $menuIcon = $('.menuIcon')
-    // const $a = $('a') //class for a instead?
-    // let show = false;
+const $menuIcon = $('.menuItems i')
+const $a = $('.menuLink')
+let show = true;
 
 //handler for click event
-    // const showMenu = (event) => {
-    //     if (show) {
-    //         $a.each(function (index) {
-    //             $(this).css('display', 'none')
-    //         })
-    //         show = false
-    //     } else {
-    //         $a.each(function (index) {
-    //             $(this).css('display', 'block')
-    //         })
-    //         show = true
-    //     }
-    // }
+const showMenu = (event) => {
+    if (show) {
+        $a.each(function (index) {
+            $(this).css('display', 'block')
+        })
+        show = false
+    } else {
+            $a.each(function (index) {
+            $(this).css('display', 'none')
+        })
+        show = true
+    }
+}
+$menuIcon.on('click', showMenu)
 
-    // $menuIcon.on('click', showMenu)
+//on click of menu item, menu disappears!!
+const hideMenu = (event) => {
+    $a.each(function (index) {
+        $(this).css('display', 'none')
+    })
+
+}
+$a.on('click', hideMenu)

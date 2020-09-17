@@ -19,30 +19,26 @@
 </head>
 <body>
     <div class="navContainer">
-        <p id="KR">KR</p>
-        <div id="menuItems">
-            <!-- add class to a? -->
-            <a href="">Home</a>
-            <a href="">Portfolio</a>
-            <a href="">Skills</a>
-            <a href="">Contact</a>
-        </div>
-        <!-- move icon element into menuitems div? display block -->
-        <div id="menuIcon">
+        <p class="KR">KR</p>
+        <div class="menuItems">
             <i class="fas fa-angle-double-left fa-2x"></i>
+            <a class="menuLink" href="#homepage">Home</a>
+            <a class="menuLink" href="#portfolio">Portfolio</a>
+            <a class="menuLink" href="#skills">Skills</a>
+            <a class="menuLink" href="#contact">Contact</a>
         </div>
     </div>
-    <div class="homepage">
+    <div class="homepage" id="homepage">
         <h1>Kim Rasmussen</h1>
         <h2>Software Engineer</h2>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <h3>Portfolio</h3>
         <div class="portContainer">
 
         </div>
     </div>
-    <div class="skillsSection">
+    <div class="skillsSection" id="skills">
         <h3>Skills</h3>
         <div class="skillsIconsContain">
             <div class="icon">
@@ -68,9 +64,25 @@
         </div>
 
     </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <h3>Contact me</h3>
-        
+        <form action="https://formspree.io/mleorovq"
+            method="POST">
+            <label>
+                <p class="formField">Your name:</p>
+                <input type="text" name="name">
+            </label>
+            <label>
+                <p class="formField">Your email:</p>
+                <input type="text" name="_replyto">
+            </label>
+            <label>
+                <p class="formField">Your message:</p>
+                <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+
         <img src="https://res.cloudinary.com/dzxytz23k/image/upload/v1600199105/SEI%20-%20Project%201/SEI%20-%20Project%201%20-%20project%20images/Kosuda_Kim_SharePoint_i8eysp.jpg" alt="kim profile" class="profilePic"> 
         <p class="email">kim.rasmussen14@gmail.com</p>
     </div>

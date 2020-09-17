@@ -3,10 +3,8 @@ body {
 }
 
 .navContainer {
-    display: grid;
-    /* revisit column setup */
-    grid-template-columns: auto;
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: space-between;
     background-color: #774C60;
     padding: 10px;
 }
@@ -15,34 +13,29 @@ p {
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: #D8D4D8;
-    grid-column: 1/2;
-    justify-self: start;
-    align-self: center;
+    padding: 10px;
 }
 
-#menuItems { 
-    grid-column: 2/3;
-   
+.menuItems i {
+    float: right;
+    padding: 10px
+    /* margin: 0 0 10px */
 }
 
-#menuItems a {
-    justify-self: end;
-    align-self: center;
+.menuItems a.menuLink {
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    font-size: 22px;
+    margin: 8px 0;
+    /* justify-self: end;
+    align-self: center; */
     /* display: none; */
 }
 
-#menuIcon {
-    grid-column: 3/4;
-    display: grid;
-}
-
-#menuIcon i {
-    justify-self: end;
-    align-self: center;
-}
-
 .homepage {
-    height: 400px;
+    height: 800px;
     background-image: url("https://images.unsplash.com/photo-1542407424724-5426773d65a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     background-size: cover;
     /* background-repeat: no-repeat;
@@ -53,15 +46,15 @@ p {
 
 h1 {
     font-family: 'Inter', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     color: black;
     text-align: center;
-    padding: 125px 0 0 0;
+    padding: 175px 0 0 0;
 }
 
 h2 {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     color: black;
     text-align: center;
     padding: 10px 0 0 0;
@@ -69,9 +62,9 @@ h2 {
 
 h3 {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     color: #372549;
-    padding: 20px;
+    padding: 25px;
 }
 
 .portContainer {
@@ -83,7 +76,7 @@ h3 {
     height: 200px;
     width: 300px;
     justify-self: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
 }
 
 .projImg {
@@ -124,6 +117,12 @@ h3 {
 .contact {
     background-color: #b75d69;
 }
+
+form {
+    display: grid;
+    margin: 10px;
+}
+
 .profilePic {
     width: 100px;
     border-radius: 35px;
