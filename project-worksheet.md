@@ -31,6 +31,8 @@ Link To Site  | What I Incorporated to My Site |
 
 Link to my Google sheet is [here](https://docs.google.com/spreadsheets/d/1deWdcbHJbl85QS8QRVPZafFzkD-kRn1SLpAUso8vTqQ/edit?usp=sharing).
 
+Link to my [Git Enterprise repo](https://git.generalassemb.ly/kimrass14/project-1-portfolio/commits/master/Portfolio_site) where I initially pushed up my files. You can see the first few commits dating back to the beginning of the project. Then I switched over to my personal Git repo.
+
 ## Wireframes
 
 - [Mobile](https://res.cloudinary.com/dzxytz23k/image/upload/v1600035478/SEI%20-%20Project%201/SEI_-_Project_1_-_Mobile_wireframe_tedgrt.png)
