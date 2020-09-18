@@ -144,6 +144,29 @@ window.location = $(this).attr('href');
 });
 ```
 
+```
+//JS file: added div to add opacity when hovering over the project tiles
+      const $view = $('<div class="view"></div>')
+      $view.text("View Project")
+      $($div).append($view)
+//CSS file: set default settings of new div then set opacity to .7 when hovered
+      .view {
+          opacity: 0;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          line-height: 200px;
+          background-color: #D8D4D8;
+          font-size: 20px;
+      }
+      .indivProj:hover .view {
+          opacity: .7;
+      }
+```
+
 ## Issues and Resolutions
  Below is a list of all major issues encountered and their resolution:
 
@@ -158,4 +181,3 @@ window.location = $(this).attr('href');
 **ERROR**:unable to get site deployed
 
 **RESOLUTION**:needed to create github.io repo using my username (thought I could just use my name). Needed to make sure I wasn't putting a repo inside another repo. Deleted some local repos, created new folder with only my html, css and js files for the site. Restarted the github creation of repo process and re-deployed.
-

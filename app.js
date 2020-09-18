@@ -43,9 +43,7 @@ $.ajax({ url: sheetAsJSON })
                 link: project.gsx$link.$t,
             }
         })
-
         render(projects)
-        console.log('these are the projects:', projects)
     })
 
 //jquery to on click show menu block. watched Alex's video.

@@ -50,7 +50,7 @@ h2 {
     font-size: 25px;
     color: black;
     text-align: center;
-    padding: 20px 0 0 0;
+    padding-top: 20px;
 }
 
 /* /////PORTFOLIO SECTION/////// */
@@ -58,6 +58,7 @@ h3 {
     font-size: 30px;
     color: #372549;
     padding: 100px 20px 20px 20px;
+    border-bottom: 5px dotted black;
 }
 .portfolio {
     background-color: #D8D4D8;
@@ -145,16 +146,13 @@ h3 {
     background-color: #b75d69;
     padding-bottom: 30px;
 }
-
 form {
     display: grid;
-    margin: 10px;
+    padding-top: 40px;
 }
-
 label {
     display: grid;
 }
-
 input {
     width: 250px;
     font-family: 'Quicksand', sans-serif;
@@ -165,7 +163,6 @@ input {
     margin: auto;
     margin-bottom: 5px;
 }
-
 textarea {
     width: 250px;
     height: 60px;
@@ -177,7 +174,6 @@ textarea {
     margin: auto;
     margin-bottom: 5px;
 }
-
 button {
     width: 260px;
     font-family: 'Quicksand', sans-serif;
@@ -188,14 +184,12 @@ button {
     padding: 5px;
     margin: auto;
 }
-
 .profilePic {
     width: 100px;
     border-radius: 35px;
     margin: 30px auto;
     display: block;
 }
-
 .email {
     font-size: 10px;
     text-align: center;
@@ -207,7 +201,6 @@ footer {
     color: #D8D4D8;
     padding: 10px;
 }
-
 p.footer {
     font-size: 10px;
     text-align: center;
