@@ -3,6 +3,7 @@ body {
     font-weight: 500;
 }
 
+/* /////NAV BAR/////// */
 .navContainer {
     display: flex;
     justify-content: space-between;
@@ -12,20 +13,15 @@ body {
     top: 0;
     width: 100%;
 }
-
 p.KR {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
     font-size: 30px;
     color: #D8D4D8;
     padding: 8px;
 }
-
 .menuItems i {
     float: right;
     padding: 10px;
 }
-
 .menuItems a.menuLink {
     display: none;
     color: black;
@@ -34,24 +30,22 @@ p.KR {
     font-size: 25px;
     margin: 8px 0;
 }
-
 .menuItems a.menuLink:hover {
     color: black;
 }
 
+/* /////HOMEPAGE/////// */
 .homepage {
     height: 800px;
     background-image: url("https://images.unsplash.com/photo-1542407424724-5426773d65a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     background-size: cover;
 }
-
 h1 {
     font-size: 40px;
     color: black;
     text-align: center;
     padding-top: 300px;
 }
-
 h2 {
     font-size: 25px;
     color: black;
@@ -59,6 +53,7 @@ h2 {
     padding: 20px 0 0 0;
 }
 
+/* /////PORTFOLIO SECTION/////// */
 h3 {
     font-size: 30px;
     color: #372549;
@@ -116,6 +111,8 @@ h3 {
     background-color: black;
     color: white;
 }
+
+/* /////ABOUT SECTION/////// */
 .aboutSection {
     background-color: #D8D4D8;
 }
@@ -129,24 +126,21 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .icon {
     width: 30%;
     height: 30%;
     margin: 0 0 30px 0;
 }
-
 .iconImage {
     width: 100%;
 }
-
 .iconLabel {
     font-size: 15px;
     color: #372549; 
     text-align: center;
 }
 
-
+/* /////CONTACT SECTION/////// */
 .contact {
     background-color: #b75d69;
     padding-bottom: 30px;
@@ -207,6 +201,7 @@ button {
     text-align: center;
 }
 
+/* /////FOOTER SECTION/////// */
 footer {
     background-color: black;
     color: #D8D4D8;
@@ -225,19 +220,18 @@ p.footer {
     text-align: center;
 }
 
+/* /////RESPONSIVENESS/////// */
 @media screen and (min-width: 768px) {
     .menuItems {
         width: 50%;
         display: flex;
         justify-content: space-between;
         padding: 0 15px;
-
     }
     .menuItems a.menuLink {
         display: inline;
         color: white;
     }
-
     .menuItems i {
         display: none;
     }
@@ -269,7 +263,6 @@ p.footer {
     .menuItems {
         width: 40%;
     }
-    
     h1 {
         font-size: 60px;
         padding-top: 250px;
