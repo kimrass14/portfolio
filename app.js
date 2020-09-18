@@ -1,5 +1,3 @@
-console.log('app.js')
-
 let sheetUrl = "https://docs.google.com/spreadsheets/d/1deWdcbHJbl85QS8QRVPZafFzkD-kRn1SLpAUso8vTqQ/edit?usp=sharing"
 
 let sheetID = "1deWdcbHJbl85QS8QRVPZafFzkD-kRn1SLpAUso8vTqQ"
@@ -9,12 +7,9 @@ let sheetAsJSON = "https://spreadsheets.google.com/feeds/list/1deWdcbHJbl85QS8QR
 
 const render = (projectsArr) => {
     projectsArr.forEach(elem => {
-        console.log('projectsArr:', elem)
         const $div = $('<div class="indivProj"></div>')
         $div.attr('href', elem.link)
         $('div.portContainer').append($div)
-
-        console.log('project link:', elem.link)
 
         const $img = $('<img class="projImg">')
         $img.attr('src', elem.image).attr('alt', 'project preview')

@@ -27,7 +27,7 @@ p.KR {
 }
 
 .menuItems a.menuLink {
-    display: block;
+    display: none;
     color: black;
     text-decoration: none;
     text-align: right;
@@ -95,7 +95,6 @@ h3 {
     line-height: 200px;
     background-color: #D8D4D8;
     font-size: 20px;
-    /* font-weight: 2000; */
 }
 .indivProj:hover .view {
     opacity: .7;
