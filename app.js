@@ -23,6 +23,9 @@ const render = (projectsArr) => {
         const $p = $(`<p class="title">${elem.title}</p>`)
         $($div).append($p)
 
+        const $p2 = $(`<p class="description">${elem.description}</p>`)
+        $($div).append($p2)
+
         //add div for hover opacity
         const $view = $('<div class="view"></div>')
         $view.text("View Project")
@@ -50,7 +53,7 @@ $.ajax({ url: sheetAsJSON })
         console.log('these are the projects:', projects)
     })
 
-//jquery to on click show menu block
+//jquery to on click show menu block. watched Alex's video.
 const $menuIcon = $('.menuItems i')
 const $a = $('.menuLink')
 let show = true;

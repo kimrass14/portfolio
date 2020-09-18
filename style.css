@@ -1,5 +1,6 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 }
 
 .navContainer {
@@ -7,13 +8,17 @@ body {
     justify-content: space-between;
     background-color: #774C60;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 p.KR {
-    font-family: 'Inter', sans-serif;
-    font-size: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
     color: #D8D4D8;
-    padding: 10px;
+    padding: 8px;
 }
 
 .menuItems i {
@@ -26,8 +31,12 @@ p.KR {
     color: black;
     text-decoration: none;
     text-align: right;
-    font-size: 22px;
+    font-size: 25px;
     margin: 8px 0;
+}
+
+.menuItems a.menuLink:hover {
+    color: black;
 }
 
 .homepage {
@@ -37,39 +46,37 @@ p.KR {
 }
 
 h1 {
-    font-family: 'Inter', sans-serif;
     font-size: 40px;
     color: black;
     text-align: center;
-    padding: 175px 0 0 0;
+    padding-top: 300px;
 }
 
 h2 {
-    font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: black;
     text-align: center;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 h3 {
-    font-family: 'Inter', sans-serif;
     font-size: 30px;
     color: #372549;
-    padding: 25px;
+    padding: 100px 20px 20px 20px;
 }
-
+.portfolio {
+    background-color: #D8D4D8;
+}
 .portContainer {
     display: grid;
     justify-content: center;
     padding: 40px 0px;
 }
-
 .indivProj {
     border: solid;
     border-color: #774C60;
     border-width: 5px;
-    height: 200px;
+    height: 237px;
     width: 300px;
     justify-self: center;
     margin: 0 0 30px 0;
@@ -88,6 +95,7 @@ h3 {
     line-height: 200px;
     background-color: #D8D4D8;
     font-size: 20px;
+    /* font-weight: 2000; */
 }
 .indivProj:hover .view {
     opacity: .7;
@@ -98,13 +106,25 @@ h3 {
     object-fit: cover;
 }
 .title {
-    background-color: #D8D4D8;
-    color: #774C60;
+    background-color: black;
+    color: #D8D4D8;
     font-size: 20px;
     padding: 10px 0px 0px 10px;
     height: 30px;
 }
-.skillsIconsContain {
+.description {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.aboutSection {
+    background-color: #D8D4D8;
+}
+.aboutMe {
+    text-align: center;
+    padding: 25px;
+}
+.aboutIconsContain {
     padding: 35px 15px;
     display: flex;
     flex-wrap: wrap;
@@ -122,7 +142,7 @@ h3 {
 }
 
 .iconLabel {
-    font-size: 12px;
+    font-size: 15px;
     color: #372549; 
     text-align: center;
 }
@@ -144,7 +164,8 @@ label {
 
 input {
     width: 250px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     background-color: #D8D4D8;
     border: none;
     padding: 5px;
@@ -155,7 +176,8 @@ input {
 textarea {
     width: 250px;
     height: 60px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     background-color: #D8D4D8;
     border: none;
     padding: 5px;
@@ -165,7 +187,8 @@ textarea {
 
 button {
     width: 260px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
     background-color: #774C60;
     color: white;
     border: none;
@@ -234,7 +257,7 @@ p.footer {
         padding: auto;
         margin: 10px;
     }
-    .skillsIconContain {
+    .aboutIconContain {
         padding: 35px 25px;
     }
     .icon {
@@ -250,6 +273,7 @@ p.footer {
     
     h1 {
         font-size: 60px;
+        padding-top: 250px;
     }
     h2 {
         font-size: 30px;
@@ -257,7 +281,6 @@ p.footer {
     }
     h3 {
         font-size: 40px;
-        padding: 40px;
     }
     .portContainer {
         justify-content: center;
@@ -266,6 +289,10 @@ p.footer {
     .indivProj {
         margin: 10px;
         padding: 0px;
+    }
+    .aboutMe {
+        font-size: 30px;
+        padding: 100px;
     }
     .icon {
         width: 10%;
