@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kim Rasmussen</title>
-        <!-- css reset -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-        <!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&display=swap" rel="stylesheet">
-        <!-- FONT AWESOME -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
-        <!-- jquery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <!-- style.css -->
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <div class="navContainer">
-            <!-- <p class="KR">KR</p> -->
-            <a class="KR" href="#homepage">KR</a>
-            <div class="menuItems">
-                <i class="fas fa-angle-double-left fa-2x"></i>
-                <!-- <a class="menuLink" href="#homepage">Home</a> -->
-                <a class="menuLink" href="#portfolio">Portfolio</a>
-                <a class="menuLink" href="#about">About</a>
-                <a class="menuLink" href="#contact">Contact</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Rasmussen</title>
+    <!-- css reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navContainer">
+        <!-- <p class="KR">KR</p> -->
+        <a class="KR" href="#homepage">KR</a>
+        <div class="menuItems">
+            <i class="fas fa-angle-double-left fa-2x"></i>
+            <!-- <a class="menuLink" href="#homepage">Home</a> -->
+            <a class="menuLink" href="#portfolio">Portfolio</a>
+            <a class="menuLink" href="#about">About</a>
+            <a class="menuLink" href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="homepage" id="homepage">
+        <h1>Kim Rasmussen</h1>
+        <h2>Software Engineer</h2>
+    </div>
+
+    <div class="portfolio" id="portfolio">
+        <h3>Portfolio</h3>
+        <div class="portContainer">
+        </div>
+    </div>
+
+    <div class="aboutSection" id="about">
+        <h3>About</h3>
+        <p class="aboutMe">Hi, I'm Kim. I am a student at General Assembly based in Chicago taking the Software
+            Engineering Immersive course. Below are some of the beginner skills learned to date, with many more to come.
+            I have years of forensic accounting investigation experience that built up transferable analytical skills
+            for software engineering.</p>
+        <div class="aboutIconsContain">
+            <div class="icon">
+                <img src="https://img.icons8.com/color/150/000000/html-5.png" class="iconImage" />
+                <p class="iconLabel">HTML</p>
+            </div>
+            <div class="icon">
+                <img src="https://img.icons8.com/color/150/000000/javascript-logo-1.png" class="iconImage" />
+                <p class="iconLabel">JavaScript</p>
+            </div>
+            <div class="icon">
+                <img src="https://img.icons8.com/color/150/000000/css3.png" class="iconImage" />
+                <p class="iconLabel">CSS</p>
+            </div>
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/150/000000/jquery.png" class="iconImage" />
+                <p class="iconLabel">jQuery</p>
+            </div>
+            <div class="icon">
+                <img src="https://img.icons8.com/ios-filled/150/000000/github.png" class="iconImage" />
+                <p class="iconLabel">GitHub</p>
             </div>
         </div>
+    </div>
 
-        <div class="homepage" id="homepage">
-            <h1>Kim Rasmussen</h1>
-            <h2>Software Engineer</h2>
-        </div>
+    <div class="contact" id="contact">
+        <h3>Contact me</h3>
+        <form action="https://formspree.io/mleorovq" method="POST">
+            <div>Send me an email at kim.rasmussen14@gmail.com or fill out the form below. Look forward to hearing from
+                you!</div>
+            <label>
+                <input placeholder="Name" type="text" name="name">
+            </label>
+            <label>
+                <input placeholder="Email" type="text" name="_replyto">
+            </label>
+            <label>
+                <textarea placeholder="Your message" name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+        <img src="https://res.cloudinary.com/dzxytz23k/image/upload/v1600199105/SEI%20-%20Project%201/SEI%20-%20Project%201%20-%20project%20images/Kosuda_Kim_SharePoint_i8eysp.jpg"
+            alt="kim profile" class="profilePic">
+        <p class="email">kim.rasmussen14@gmail.com</p>
+    </div>
 
-        <div class="portfolio" id="portfolio">
-            <h3>Portfolio</h3>
-            <div class="portContainer">
-            </div>
-        </div>
+    <script src="app.js" charset="utf-8"></script>
+</body>
 
-        <div class="aboutSection" id="about">
-            <h3>About</h3>
-            <p class="aboutMe">Hi, I'm Kim. I am a student at General Assembly based in Chicago taking the Software Engineering Immersive course. Below are some of the beginner skills learned to date, with many more to come. I have years of forensic accounting investigation experience that built up transferable analytical skills for software engineering.</p>
-            <div class="aboutIconsContain">
-                <div class="icon">
-                    <img src="https://img.icons8.com/color/150/000000/html-5.png" class="iconImage" />
-                    <p class="iconLabel">HTML</p>
-                </div>
-                <div class="icon">
-                    <img src="https://img.icons8.com/color/150/000000/javascript-logo-1.png" class="iconImage" />
-                    <p class="iconLabel">JavaScript</p>
-                </div>
-                <div class="icon">
-                    <img src="https://img.icons8.com/color/150/000000/css3.png" class="iconImage" />
-                    <p class="iconLabel">CSS</p>
-                </div>
-                <div class="icon">
-                    <img src="https://img.icons8.com/ios-filled/150/000000/jquery.png" class="iconImage" />
-                    <p class="iconLabel">jQuery</p>
-                </div>
-                <div class="icon">
-                    <img src="https://img.icons8.com/ios-filled/150/000000/github.png" class="iconImage" />
-                    <p class="iconLabel">GitHub</p>
-                </div>
-            </div>
-        </div>
+<footer>
+    <p class="footer">(c) 2020 Kim Rasmussen</p>
+    <p class="reference"><a id="reference" href="https://icons8.com/icon/EAUyKy3IwmqM/javascript">icons by Icons8</a>
+    </p>
+</footer>
 
-        <div class="contact" id="contact">
-            <h3>Contact me</h3>
-            <form action="https://formspree.io/mleorovq" method="POST">
-                <div>Send me an email at kim.rasmussen14@gmail.com or fill out the form below. Look forward to hearing from you!</div>
-                <label>
-                    <input placeholder="Name" type="text" name="name">
-                </label>
-                <label>
-                    <input placeholder="Email" type="text" name="_replyto">
-                </label>
-                <label>
-                    <textarea placeholder="Your message" name="message"></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
-            <img src="https://res.cloudinary.com/dzxytz23k/image/upload/v1600199105/SEI%20-%20Project%201/SEI%20-%20Project%201%20-%20project%20images/Kosuda_Kim_SharePoint_i8eysp.jpg"
-                alt="kim profile" class="profilePic">
-            <p class="email">kim.rasmussen14@gmail.com</p>
-        </div>
-
-        <script src="app.js" charset="utf-8"></script>
-    </body>
-
-    <footer>
-        <p class="footer">(c) 2020 Kim Rasmussen</p>
-        <p class="reference"><a id="reference" href="https://icons8.com/icon/EAUyKy3IwmqM/javascript">icons by Icons8</a></p>
-    </footer>
 </html>
