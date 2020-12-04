@@ -18,7 +18,7 @@ const render = (projectsArr) => {
         const $p = $(`<p class="title">${elem.title}</p>`)
         $($div).append($p)
 
-        const $p2 = $(`<p class="description">${elem.description}</p>`)
+        const $p2 = $(`<p class="technology">${elem.technology}</p>`)
         $($div).append($p2)
 
         //add div for hover opacity
@@ -39,7 +39,7 @@ $.ajax({ url: sheetAsJSON })
             return {
                 title: project.gsx$title.$t,
                 image: project.gsx$image.$t,
-                description: project.gsx$description.$t,
+                technology: project.gsx$technology.$t,
                 link: project.gsx$link.$t,
             }
         })
@@ -67,13 +67,13 @@ const showMenu = (event) => {
 }
 $menuIcon.on('click', showMenu)
 
-//on click of menu item, menu disappears. It worked at one point!
-// if ($(window).width() < 769) {
-//     const hideMenu = (event) => {
-//         $a.each(function (index) {
-//             $(this).css('display', 'none')
-//         })
 
-//     }
-//     $a.on('click', hideMenu)
-// }
+if ($(window).width() < 769) {
+    const hideMenu = (event) => {
+        $a.each(function (index) {
+            $(this).css('display', 'none')
+        })
+        show = true
+    }
+    $a.on('click', hideMenu)
+}
