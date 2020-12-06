@@ -120,11 +120,24 @@ h3 {
     /* padding: 10px 0px 0px 10px; */
     height: 30px;
 }
+.techDiv {
+    display: flex;
+}
 .technology {
     padding: 10px;
     background-color: black;
     color: white;
     text-align: center;
+    flex-grow: 1;
+}
+.techDiv i {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
 }
 .description {
     /* text-align: justify; */
@@ -140,22 +153,27 @@ h3 {
     text-align: center;
     padding: 25px;
 }
+.resume {
+    text-align: center;
+}
+.resume a {
+    color: #774C60;
+}
 .aboutIconsContain {
-    padding: 35px 15px;
+    padding: 35px 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .icon {
+    display: grid;
+    justify-items: center;
     width: 30%;
-    height: 30%;
+    height: 20%;
     margin: 0 0 30px 0;
 }
-.iconImage {
-    width: 100%;
-}
 .iconLabel {
-    font-size: 15px;
+    font-size: 20px;
     color: #372549; 
     text-align: center;
 }
@@ -213,12 +231,21 @@ button {
 .profilePic {
     width: 100px;
     border-radius: 35px;
-    margin: 30px auto;
+    margin: 30px;
     display: block;
 }
-.email {
-    font-size: 10px;
-    text-align: center;
+.picAndMediaDiv {
+    display: flex;
+    justify-content: center;
+}
+.media {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+.media i {
+    margin: 5px;
+    color: black;
 }
 
 /* /////FOOTER SECTION/////// */
@@ -273,7 +300,7 @@ p.footer {
         padding: 35px 25px;
     }
     .icon {
-        width: 25%;
+        width: 20%;
     }
 }
 
@@ -308,7 +335,7 @@ p.footer {
     .icon {
         width: 10%;
         height: 10%;
-        margin: 0 25px;
+        margin: 25px;
     }
     input, textarea {
         width: 30%;

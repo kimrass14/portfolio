@@ -26,15 +26,22 @@ const render = (projectsArr) => {
             $view.text("View Project")
             $($previewDiv).append($view)
         
-        const $p2 = $(`<p class="technology">${elem.technology}</p>`)
-        $($div).append($p2)
+        const $techDiv = $('<div class="techDiv"></div>')
+        $($div).append($techDiv)
+
+            const $p2 = $(`<p class="technology">${elem.technology}</p>`)
+            $($techDiv).append($p2)
+
+            const $arrow = $('<i class="fas fa-angle-double-down"></i>')
+            $($techDiv).append($arrow)
+
 
            
 
         // const $button = $('<button></button>')
         // $button.text("button")
         // $($div).after($button)
-        $p2.click(function() {
+        $arrow.click(function() {
             $($p3).toggle()
         })
 
@@ -102,5 +109,10 @@ if ($(window).width() < 769) {
     $a.on('click', hideMenu)
 }
 
-
-// $div.attr('href', elem.link)
+// function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+// }
