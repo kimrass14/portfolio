@@ -136,8 +136,24 @@ h3 {
     font-family: 'Proza Libre', sans-serif;
     color: #006D8A;
     padding: 100px 20px 20px 20px;
-    border-bottom: 5px dotted black;
+    position: relative;
 }
+h3:after {
+    z-index: -0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 75%;
+    background-color: inherit;
+    border-bottom: 10px solid 
+    #02B6CA;
+    border-right: 14px solid #02B6CA;
+    transform: skewX(-40deg);
+    
+}
+
 .portfolio {
     background-color: #D8D4D8;
 }
@@ -251,6 +267,7 @@ h3 {
 .contact {
     background-color: #CD8787;
     padding-bottom: 30px;
+    height: 800px;
 }
 form {
     display: grid;
