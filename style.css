@@ -129,6 +129,11 @@ h2 {
     /* padding-left: 5%; */
     /* padding-top: 375px; */
 }
+p {
+    font-size: 15px;
+    font-family: 'Proza Libre', sans-serif;
+    padding-top: 10px;
+}
 
 /* /////PORTFOLIO SECTION/////// */
 h3 {
