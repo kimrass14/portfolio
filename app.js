@@ -21,9 +21,12 @@ const render = (projectsArr) => {
             $($previewDiv).append($img)
 
             //for hover to click on link
-            const $view = $('<a class="view">View Project</a>')
-            $view.attr('href', elem.link).attr('target', '_blank')
+            // const $view = $('<a class="view">View Project</a>')
+            const $view = $('<div class="view"></div>')
             $($previewDiv).append($view)
+            const $projectLink = $(`<button class="projBtn"><a href=${elem.link} target="_blank" class="projLink">View Project</a></button>`)
+            const $githubLink = $(`<button class="gitBtn"><a href=${elem.github} target="_blank" class="projLink">GitHub</a></button`)
+            $($view).append($projectLink, $githubLink)
         
         const $techDiv = $('<div class="techDiv"></div>')
         $($div).append($techDiv)
@@ -52,6 +55,7 @@ $.ajax({ url: sheetAsJSON })
                 image: project.gsx$image.$t,
                 technology: project.gsx$technology.$t,
                 link: project.gsx$link.$t,
+                github: project.gsx$github.$t,
                 description: project.gsx$description.$t
             }
         })
