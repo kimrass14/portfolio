@@ -1,6 +1,3 @@
-
-// $("h1").animate({left: '250'})
-
 let sheetUrl = "https://docs.google.com/spreadsheets/d/1deWdcbHJbl85QS8QRVPZafFzkD-kRn1SLpAUso8vTqQ/edit?usp=sharing"
 
 let sheetID = "1deWdcbHJbl85QS8QRVPZafFzkD-kRn1SLpAUso8vTqQ"
@@ -14,7 +11,6 @@ const render = (projectsArr) => {
         $('div.portContainer').append($div)
 
         const $previewDiv = $(`<div class="previewDiv"></div>`)
-        $previewDiv.attr('href', elem.link)
         $($div).append($previewDiv)
 
             const $p = $(`<p class="title">${elem.title}</p>`)
@@ -24,9 +20,9 @@ const render = (projectsArr) => {
             $img.attr('src', elem.image).attr('alt', 'project preview')
             $($previewDiv).append($img)
 
-        //  add div for hover opacity
-            const $view = $('<div class="view"></div>')
-            $view.text("View Project")
+            //for hover to click on link
+            const $view = $('<a class="view">View Project</a>')
+            $view.attr('href', elem.link).attr('target', '_blank')
             $($previewDiv).append($view)
         
         const $techDiv = $('<div class="techDiv"></div>')
@@ -35,34 +31,16 @@ const render = (projectsArr) => {
             const $p2 = $(`<p class="technology">${elem.technology}</p>`)
             $($techDiv).append($p2)
 
-            const $arrow = $('<i class="fas fa-angle-double-down"></i>')
+            const $arrow = $('<button><i class="fas fa-angle-double-down"></i></button>')
             $($techDiv).append($arrow)
 
-
-           
-
-        // const $button = $('<button></button>')
-        // $button.text("button")
-        // $($div).after($button)
-        $arrow.click(function() {
-            $($p3).toggle()
-        })
-
-        const $p3 = $(`<p class="description">${elem.description}</p>`)
-        $($div).append($p3)
-
-        
-
-        $previewDiv.click(function () {
-            window.location = $(this).attr('href');
-
-        
-        $p2.click(function() {
+            //on click of arrow shows project description
+            $arrow.click(function() {
                 $($p3).toggle()
             })
-        
+            const $p3 = $(`<p class="description">${elem.description}</p>`)
+            $($div).append($p3)
 
-        });
     })
 }
 
@@ -80,12 +58,11 @@ $.ajax({ url: sheetAsJSON })
         render(projects)
     })
 
-//jquery to on click show menu block. watched Alex's video.
-const $menuIcon = $('.menuItems i')
+//menu dropdown toggle
+const $iconButton = $('.iconBtn')
 const $a = $('.menuLink')
 let show = true;
 
-//handler for click event
 const showMenu = (event) => {
     if (show) {
         $a.each(function (index) {
@@ -99,8 +76,7 @@ const showMenu = (event) => {
         show = true
     }
 }
-$menuIcon.on('click', showMenu)
-
+$iconButton.on('click', showMenu)
 
 if ($(window).width() < 769) {
     const hideMenu = (event) => {
@@ -111,11 +87,3 @@ if ($(window).width() < 769) {
     }
     $a.on('click', hideMenu)
 }
-
-// function copyToClipboard(element) {
-//     var $temp = $("<input>");
-//     $("body").append($temp);
-//     $temp.val($(element).text()).select();
-//     document.execCommand("copy");
-//     $temp.remove();
-// }
