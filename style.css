@@ -2,7 +2,6 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     width: 100%;
-    /* height: 100%; */
 }
 
 /* /////NAV BAR/////// */
@@ -18,14 +17,21 @@ body {
     width: 99%;
     z-index: 1;
 }
-
 a.KR {
     font-size: 40px;
     color: #D8D4D8;
     padding: 10px;
     text-decoration: none;
 }
-
+.menuItems button {
+    float: right;
+    background-color: black;
+    border: none;
+    box-shadow: none;
+}
+button:focus {
+    outline: none;
+}
 .menuItems i {
     float: right;
     color: #FCA188;
@@ -61,12 +67,7 @@ a.KR {
 .nameDiv {
     display: grid;
     justify-content: start;
-    /* padding-top: 320px; */
-    /* padding-left: 5%; */
-    /* padding-bottom: 20px; */
-    /* border-bottom: solid black; */
 }
-
 h1 {
     font-size: 40px;
     font-family: 'Proza Libre', sans-serif;
@@ -74,25 +75,17 @@ h1 {
     text-align: left;
     padding-bottom: 15px;
 }
-
 .kim {
-    /* display: flex;
-    flex-wrap: nowrap; */
     justify-content: center;
     overflow:hidden;
     white-space:nowrap;
-    /* margin-left: 0px; */
-    /* padding-top: 300px; */
 }
     .kim:first-of-type {
         animation: showup 7s;
     }
-
     .kim:last-of-type {
-    /* width:350px; */
-    animation: reveal 7s;
+        animation: reveal 7s;
     }
-
     .kim:last-of-type h1 {
     margin-left:0px;
     animation: slidein 7s;
@@ -105,7 +98,6 @@ h1 {
         80% {opacity:1;}
         100% {opacity:1;}
     }
-
     @keyframes slidein {
         0% { margin-left:-800px; border-bottom: none;}
         20% { margin-left:-800px; border-bottom: none;}
@@ -126,8 +118,6 @@ h2 {
     color: black;
     text-align: left;
     padding-top: 15px;
-    /* padding-left: 5%; */
-    /* padding-top: 375px; */
 }
 p {
     font-size: 15px;
@@ -156,9 +146,7 @@ h3:after {
     #02B6CA;
     border-right: 14px solid #02B6CA;
     transform: skewX(-40deg);
-    
 }
-
 .portfolio {
     background-color: #D8D4D8;
 }
@@ -187,7 +175,6 @@ h3:after {
     background-image: linear-gradient(#D8D4D8, #02B6CA, #006D8A);
     font-size: 30px;
 }
-
 .indivProj:hover .view {
     opacity: 1;
 }
@@ -197,13 +184,12 @@ h3:after {
     object-fit: cover;
 }
 .title {
-    color: #02B6CA;
+    color: white;
     background-color: #006D8A;
     font-family: 'Proza Libre', sans-serif;
     text-align: center;
     font-size: 30px;
     padding: 10px;
-    /* padding: 10px 0px 0px 10px; */
     height: 30px;
 }
 .techDiv {
@@ -216,6 +202,11 @@ h3:after {
     text-align: center;
     flex-grow: 1;
 }
+.techDiv button {
+    padding: 0px;
+    border: none;
+    background-color: black;
+}
 .techDiv i {
     color: white;
     background-color: black;
@@ -223,13 +214,11 @@ h3:after {
     display: flex;
     align-items: center;
     padding: 0 10px;
-
 }
 .techDiv i:hover {
     color: #FCA188;
 }
 .description {
-    /* text-align: justify; */
     padding: 10px;
     display: none;
 }
@@ -240,11 +229,13 @@ h3:after {
 }
 .aboutMe {
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
     padding: 25px;
     background-image: linear-gradient( #FCA188, #CD8787, #D8D4D8)
 }
 .resume {
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
 }
 .resume a {
     color: #774C60;
@@ -278,9 +269,7 @@ form {
     display: grid;
     justify-items: center;
     padding-top: 40px;
-
 }
-
 form div {
     width: 310px;
     text-align: center;
@@ -310,7 +299,7 @@ textarea {
     margin: auto;
     margin-bottom: 5px;
 }
-button {
+.form-btn {
     width: 310px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
@@ -319,7 +308,6 @@ button {
     border: none;
     padding: 5px;
 }
-
 .picAndMediaDiv {
     display: flex;
     justify-content: center;
@@ -370,7 +358,7 @@ p.footer {
         display: inline;
         color: white;
     }
-    .menuItems i {
+    .menuItems button {
         display: none;
     }
     h1 {
@@ -396,7 +384,6 @@ p.footer {
     }
     .formAndPic {
         display: flex;
-        /* justify-content: space-around; */
         justify-content: center;
     }
     .profilePic {
@@ -407,23 +394,18 @@ p.footer {
     }
     .picAndMediaDiv {
         display: grid;
-        /* justify-content: center; */
-        /* align-content: center; */
     }
     .media {
         justify-content: center;
-        /* align-content: center; */
     }
 }
 
 @media screen and (min-width: 1024px) {
-   
     .menuItems {
         width: 40%;
     }
     h1 {
         font-size: 60px;
-        /* padding-top: 250px; */
     }
     h2 {
         font-size: 30px;
@@ -439,6 +421,9 @@ p.footer {
     .indivProj {
         margin: 10px;
         padding: 0px;
+    }
+    .techDiv button {
+        width: 12%;
     }
     .aboutMe {
         font-size: 30px;
@@ -463,7 +448,7 @@ p.footer {
         width: 500px;
         padding: 10px;
     }
-    button {
+    .form-btn {
         width: 100%;
         padding: 10px;
     }
